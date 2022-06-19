@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STARBUCKS FAN-MADE WEBSITE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
+        <div class="circle"></div>
         <header>
-            <a href="#"><img src="Images of Starbucks /logo.png.png" alt="" class="logo"></a>
-            <ul>
+            <a href="#"><img src="Images of Starbucks /logo.png.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">What's New</a></li>
@@ -22,13 +25,40 @@
                 <p>Lorem ipsum dolor sit, amet consectetur 
                 adipisicing elit. Architecto illo eius consectetur 
                 itaque impedit doloremque quae laudantium neque</p>
-                <a href="#">Learn More</a>
+                <a href="#">Learn more</a>
             </div>
          <div class="imgBox">
-                    <img src="IMG_0865.png" class="starbucks" width="
-                    90%">
+                    <img src="IMG_0865.png" class="starbucks">
                  </div>
-                 </div>   
+                 </div> 
+                 <ul class="thumb">
+                    <li><img src="Images of Starbucks /thumb3.png.png" onclick="imgSlider ('IMG_0865.png');changeCirclecolora('#017143')"></li>
+                    <li><img src="Images of Starbucks /thumb2.png.png" onclick="imgSlider ('thumb2.png');changeCirclecolor('#eb7495')"></li>
+                    <li><img src="Images of Starbucks /thumb1.png.png" onclick="imgSlider ('thumb1.png');changeCirclecolor('#d752b1')" ></li>
+                 </ul>
+                 <ul class="sci">
+                    <li><a href="#"><img src="Images of Starbucks /facebook.png.png"></a></li>
+                    <li><a href="#"><img src="Images of Starbucks /twitter.png.png"></a></li>
+                    <li><a href="#"><img src="Images of Starbucks /instagram .png.png"></a></li>
+                 </ul>
     </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCirclecolor(color ){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
