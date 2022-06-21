@@ -183,7 +183,7 @@ header ul
     background: url(Menu.png);
     background-size: 30px;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;   
     filter: invert(1);
     z-index: 11;
 }
@@ -210,10 +210,9 @@ header ul.navigation.active
     background: #fff;
     z-index: 10;
 }
-header ul li a 
+header ul li a
 {
-    font-weight: 40px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin: 5px 0;
 }
 section
